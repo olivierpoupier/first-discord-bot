@@ -1,9 +1,9 @@
 import {Message} from "discord.js";
 import { resolve } from "path/posix";
 import { isBreakOrContinueStatement } from "typescript";
-import { MuteCommand } from "../commands/mute.command";
-import { AffirmationService } from "./affirmation-service";
-import { KanyeService } from "./kanye-quote-service";
+import { MuteCommand } from "./commands/mute.command";
+import { AffirmationService } from "./services/affirmation-service";
+import { KanyeService } from "./services/kanye-quote-service";
 
 export class MessageHandler {
   private affirmationService: AffirmationService;
