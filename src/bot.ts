@@ -1,16 +1,16 @@
 import { Client, Message } from "discord.js";
-import { MessageResponder } from "./services/message-responder";
+import { MessageHandler } from "./services/message-handler";
 import { handles } from './handles';
 
 export class Bot {
     private client: Client;
     private readonly token: string;
-    private messageResponder: MessageResponder;
+    private messageHandler: MessageHandler;
 
     constructor(token: string) {
         this.client = new Client();
         this.token = token;
-        this.messageResponder = new MessageResponder();
+        this.messageHandler = new MessageHandler();
     }
 
     public listen(): Promise<string> {
@@ -20,13 +20,13 @@ export class Bot {
             if(handles.includes(firstWord)) {
                 console.log('handle this one')
     
-                this.messageResponder.handle(message, firstWord).then(() => {
+                this.messageHandler.handle(message, firstWord).then(() => {
                     console.log("Response sent!");
                 }).catch(() => {
                     console.log("Response not sent.")
                 })
             }else {
-                console.log('Ignoring bot message!')
+                console.log('Ignoring certain messages')
                 return;
             }
             
