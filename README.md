@@ -1,10 +1,9 @@
 # discord reaction bot
-A simple bot in Node using TS, based on the tutorial ['Working with TypeScript, Dependency Injection, and Discord Bots'](https://www.toptal.com/typescript/dependency-injection-discord-bot-tutorial) by Michał Krakiewicz
-
+A simple bot in Node using TS
 # Installing
 
 1. `npm install`
-2. Replace your Discord Bot token to the `.env` file
+2. Create a `.env` file and add your discord token under TOKEN=<your-token>
 
 # Running
 
