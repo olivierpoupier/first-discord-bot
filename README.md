@@ -3,7 +3,7 @@ A simple bot in Node using TS
 # Installing
 
 1. `npm install`
-2. Create a `.env` file and add your discord token under TOKEN=<your-token>
+2. Create a `.env` file and add your discord token under TOKEN=\<your-token\>
 
 # Running
 
